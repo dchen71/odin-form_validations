@@ -16,7 +16,7 @@ function v1(){
         '<h1>HTML5 Validation</h1>' + 
         '<form class="cmxform" id="commentForm" method="get" action="">' +
           '<fieldset>' +
-            '<legend>Please provide your name, email address (won\'t be published) and a comment</legend>' +
+            '<legend>HTML5 Validation</legend>' +
             '<p>' +
               '<label for="cname">Name (required, at least 2 characters)</label>' +
               '<input id="cname" name="name" minlength="2" type="text" required>' +
@@ -43,12 +43,28 @@ function v1(){
           '</fieldset>' +
         '</form>' +
       '</div>');
-}
+};
 
 
 //Empties and loads javascript validaiton
 function v2(){
 	$('.content').empty();
-	
-}
+	validate();
+};
 
+function validate(){
+	$('#regForm').validate({
+		rules: {
+			email: {
+				required: true,
+				email: true
+			}
+		},
+		messages:{
+			email: {
+				required: "Email cannot be blank",
+				email: "Please enter a valid email"
+			}
+		}
+	});
+};

@@ -15,24 +15,32 @@
     <div class="content">
       <div id="v2">
         <h1>Javascript validation</h1>
-        <form class="cmxform" id="regForm" method="get" action="">
+        <form class="form" id="regForm" method="get" action="">
           <fieldset>
-            <legend>Please provide your name, email address (won't be published) and a comment</legend>
+            <legend>Javascript Validation</legend>
             <p>
-              <label for="cname">Name (required, at least 2 characters)</label>
-              <input id="cname" name="name" type="text">
+              <label for="email">Email (required)</label>
+              <input id="email" type="text">
             </p>
             <p>
-              <label for="cemail">E-Mail (required)</label>
-              <input id="cemail" type="email" name="email">
+              <label for="email">E-Mail Confirmation (required)</label>
+              <input id="email" type="text">
             </p>
             <p>
-              <label for="age">Your age (required, 5-50)</label>
-              <input id="number" name="age" min="5" max="50" value="8" required></input>
+              <label for="country">Country (required)</label>
+              <input id="country"></input>
             </p>
             <p>
-              <label for="ccomment">Password(required)</label>
-              <textarea id="ccomment" name="comment" required></textarea>
+              <label for="zip">Zip (required)</label>
+              <input id="zip"></input>
+            </p>
+            <p>
+              <label for="password">Password(required)</label>
+              <input type="password" id="password"></input>
+            </p>
+            <p>
+              <label for="password">Password Confirmation(required)</label>
+              <input type="password" id="password"></input>
             </p>
             <p>
               <input class="submit" type="submit" value="Submit">

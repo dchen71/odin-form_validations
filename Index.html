@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <link href="Styles/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.validate.min.js"></script>    
   </head>
   <body>
     <div class="header">
@@ -23,24 +26,27 @@
               <input id="email" type="text">
             </p>
             <p>
-              <label for="email">E-Mail Confirmation (required)</label>
-              <input id="email" type="text">
+              <label for="email_confirm">E-Mail Confirmation (required)</label>
+              <input id="email_confirm" type="text">
             </p>
             <p>
-              <label for="country">Country (required)</label>
-              <input id="country"></input>
+              <label for="country">Country</label>
+              <select id="country">
+                <option value="US">United States</option>
+                <option value="Canada">Canada</option>
+              </select>
             </p>
             <p>
               <label for="zip">Zip (required)</label>
               <input id="zip"></input>
             </p>
             <p>
-              <label for="password">Password(required)</label>
+              <label for="password">Password(required. minimum length: 6)</label>
               <input type="password" id="password"></input>
             </p>
             <p>
-              <label for="password">Password Confirmation(required)</label>
-              <input type="password" id="password"></input>
+              <label for="password_confirm">Password Confirmation(required)</label>
+              <input type="password" id="password_confirm"></input>
             </p>
             <p>
               <input class="submit" type="submit" value="Submit">
@@ -49,7 +55,6 @@
       </div>   
     </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script type="text/javascript" src="Scripts/valid.js"></script>
 
   </body>

@@ -58,13 +58,52 @@ function validate(){
 			email: {
 				required: true,
 				email: true
+			},
+			email_confirm: {
+				required: true,
+				email: true,
+				equalTo: "#email"
+			},
+			zip: {
+				required: true,
+				minlength: 5
+			},
+			password: {
+				required: true,
+				minlength: 6
+			},
+			password_confirm: {
+				required: true,
+				minlength: 6,
+				equalTo: "#password"
 			}
 		},
 		messages:{
 			email: {
 				required: "Email cannot be blank",
 				email: "Please enter a valid email"
+			},
+			email_confirm: {
+				required: "Email cannot be blank",
+				email: "Please enter a valid email",
+				equalTo: "Email is the not the same"
+			},
+			zip: {
+				required: "Please enter a zip code",
+				minlength: "Please enter a zip code of length 5"
+			},
+			password: {
+				required: "Please enter a password",
+				minlength: "Please enter at least 6 characters"
+			},
+			password_confirm: {
+				required: "Please enter a password",
+				minlength: "Please enter at least 6 characters",
+				equalTo: "Please enter the same password"
 			}
 		}
 	});
 };
+
+//Masks zip code to have 5 digits
+$('#zip').mask("99999"), {placeholder: ""};

@@ -1,3 +1,8 @@
+//Loads validate function when paeg loads
+$('document').ready(function(){
+	validate();
+});
+
 //Click handler to load html5 validation
 $('.btn1').click(function(){
 	v1();
@@ -45,15 +50,25 @@ function v1(){
       '</div>');
 };
 
-
 //Empties and loads javascript validaiton
 function v2(){
-	$('.content').empty();
+	//$('.content').empty();
 	validate();
 };
 
 function validate(){
 	$('#regForm').validate({
+
+    	//Handler when submit form, popup message and reload in 5 seconds
+    	submitHandler: function( form ) {
+    	  window.alert("Successfully submitted form, reloading");
+    	    setTimeout( function() {
+    	      $( '#regForm' ).get(0).reset();
+    	      location.reload();
+    	    }, 5000 );
+    	},
+
+		//Rules for the elements
 		rules: {
 			email: {
 				required: true,
@@ -78,6 +93,7 @@ function validate(){
 				equalTo: "#password"
 			}
 		},
+		//Error messages
 		messages:{
 			email: {
 				required: "Email cannot be blank",

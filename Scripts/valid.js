@@ -52,7 +52,44 @@ function v1(){
 
 //Empties and loads javascript validaiton
 function v2(){
-	//$('.content').empty();
+	$('.content').empty();
+	$('.content').append('<div id="v2">'+
+        '<h1>Javascript validation</h1>'+
+        '<form class="form" id="regForm" method="post" action="#">'+
+          '<fieldset>'+
+            '<legend>Javascript Validation</legend>'+
+            '<div>'+
+              '<label for="email">Email (required)</label>'+
+              '<input id="email" type="text" name="email">'+
+            '</div>'+
+            '<div>'+
+              '<label for="email_confirm">E-Mail Confirmation (required)</label>'+
+              '<input id="email_confirm" type="text" name="email_confirm">'+
+            '</div>'+
+            '<div>'+
+              '<label for="country">Country</label>'+
+              '<select id="country">'+
+                '<option value="US">United States</option>'+
+                '<option value="Canada">Canada</option>'+
+              '</select>'+
+            '</div>'+
+            '<div>'+
+              '<label for="zip">Zip (required)</label>'+
+              '<input id="zip" name="zip"></input>'+
+            '</div>'+
+            '<div>'+
+              '<label for="password">Password(required. minimum length: 6)</label>'+
+              '<input type="password" id="password" name="password"></input>'+
+            '</div>'+
+            '<div>'+
+              '<label for="password_confirm">Password Confirmation(required)</label>'+
+              '<input type="password" id="password_confirm" name="password_confirm"></input>'+
+            '</div>'+
+            '<div>'+
+              '<input class="submit" type="submit" value="Submit">'+
+            '</div>'+
+          '</fieldset> ' +    
+      '</div>');
 	validate();
 };
 

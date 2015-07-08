@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="Styles/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <button class="btn1">HTML5 Validation</button>
+      <button class="btn2">Javascript Validation</button>
+    </div>
+    <div class="content">
+      <div id="v2">
+        <h1>Javascript validation</h1>
+        <form class="cmxform" id="regForm" method="get" action="">
+          <fieldset>
+            <legend>Please provide your name, email address (won't be published) and a comment</legend>
+            <p>
+              <label for="cname">Name (required, at least 2 characters)</label>
+              <input id="cname" name="name" type="text">
+            </p>
+            <p>
+              <label for="cemail">E-Mail (required)</label>
+              <input id="cemail" type="email" name="email">
+            </p>
+            <p>
+              <label for="age">Your age (required, 5-50)</label>
+              <input id="number" name="age" min="5" max="50" value="8" required></input>
+            </p>
+            <p>
+              <label for="ccomment">Password(required)</label>
+              <textarea id="ccomment" name="comment" required></textarea>
+            </p>
+            <p>
+              <input class="submit" type="submit" value="Submit">
+            </p>
+          </fieldset>      
+      </div>   
+    </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="Scripts/valid.js"></script>
+
+  </body>
+</html>
